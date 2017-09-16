@@ -7,7 +7,7 @@ import java.net.UnknownHostException;
 
 import org.junit.Test;
 
-public class SocketDemo1 {
+public class SocketTest1 {
 	
 	public static void main(String[] argg) throws Exception{
 		Socket socket=new Socket("localhost",8090);
