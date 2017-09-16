@@ -10,7 +10,7 @@ import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class ServerSocketDemo1 {
+public class ServerSocketTest1 {
 
 	/**
 	 * @param args
@@ -21,7 +21,7 @@ public class ServerSocketDemo1 {
 			server=new ServerSocket(8088);   //set the server listening port number
 			Socket socket=server.accept();   //listens for client connections
 			
-			InputStream in=socket.getInputStream();
+			InputStream in=socket.getInputStream();   //inputStream is the parent class for all input stream
 			BufferedReader reader=new BufferedReader(new InputStreamReader(in,"UTF-8"));
 			
 			OutputStream out=socket.getOutputStream();
@@ -37,7 +37,13 @@ public class ServerSocketDemo1 {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}finally{
-			
+			if(server!=null){
+				try {
+					server.close();
+				} catch (IOException e) {
+					// TODO: handle exception
+				}
+			}
 		}
 
 	}
