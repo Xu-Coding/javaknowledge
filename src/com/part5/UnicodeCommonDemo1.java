@@ -4,7 +4,6 @@ public class UnicodeCommonDemo1 {
 
 	/**
 	 * string to unicode
-	 * chinese to unicode
 	 * \\u
 	 * @param str
 	 * @return
